@@ -1,0 +1,327 @@
+/* General styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Menjaga elemen di header tetap rapi */
+    padding: 10px 50px; /* Menambah jarak dari sisi kiri dan kanan */
+    background-color: #000;
+}
+
+.header img {
+    height: 50px;
+    margin-right: 20px; /* Memberikan jarak antara logo dan teks */
+}
+
+.header .title {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header .nav {
+    display: flex;
+    gap: 30px; /* Memberikan jarak antar menu navigasi */
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav a:hover {
+    color: orange;
+    border-bottom: 2px solid orange;
+}
+
+.nav a.active {
+    color: orange;
+    border-bottom: 2px solid orange;
+}
+
+/* Home page styling */
+.banner {
+    padding: 50px 0;
+    text-align: center;
+    background-image: url('images/COMINGSOON.jpg');
+    background-size: contain; /* Mengatur gambar agar seluruh bagian terlihat */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+    background-position: center;
+    height: 400px; /* Pastikan cukup tinggi untuk menampilkan gambar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.banner h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 10px 0;
+}
+
+.banner p {
+    font-size: 18px;
+    margin: 0;
+}
+
+
+.index-products {
+    text-align: center;
+    padding: 20px;
+}
+
+.index-products h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.index-product-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.index-product-list img {
+    height: 100px;
+    width: 100px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+/* About Us page styling */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    background-color: #fff;
+    color: #000;
+}
+
+.content .text {
+    max-width: 70%;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.content .image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Product page styling */
+.products {
+    padding: 40px;
+    text-align: center;
+    background-color: #000; /* Warna latar belakang */
+    color: white;
+}
+
+.products h2 {
+    font-size: 40px; /* Ukuran font lebih besar */
+    margin-bottom: 30px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px; /* Memberikan jarak antar huruf */
+    text-align: center; /* Memastikan judul berada di tengah */
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Tata letak responsif */
+    gap: 20px;
+    padding: 50px;
+    justify-items: center;
+    align-items: center;
+}
+
+
+/* Batasi menjadi 4 card per baris pada layar desktop */
+@media (min-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr); /* Maksimal 4 card per baris */
+    }
+}
+
+.product-card {
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    transition: transform 0.2s, box-shadow 0.2s; /* Animasi hover */
+    text-align: center;
+    padding: 20px;
+    max-width: 300px;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.product-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: orange;
+    color: #000;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.product-card a:hover {
+    background-color: #f18930;
+}
+
+.product-card:hover {
+    transform: translateY(-20px); /* Animasi naik */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1); /* Efek bayangan lebih besar */
+}
+
+/* Footer styling */
+footer {
+    background: #000;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    margin-top: auto; /* Membuat footer menempel di bawah */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 50px;
+    background-color: #000;
+    color: white;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.footer-column p, .footer-column a {
+    font-size: 14px;
+    margin: 5px 0;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s;
+}
+
+.footer-icons img:hover {
+    transform: scale(1.2);
+}
+
+.bottom-bar {
+    background-color: #f18930;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #000;
+}
+
+/* Styling scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* Lebar scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background: orange; /* Warna slider */
+    border-radius: 10px; /* Membuat slider melengkung */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #f18930; /* Warna slider saat hover */
+}
+
+::-webkit-scrollbar-track {
+    background: #000; /* Warna latar scrollbar */
+}
+
+/* About Us Content Styling */
+.about-container {
+    display: flex;
+    flex-wrap: wrap; /* Agar responsif pada layar kecil */
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: #ffcc00;
+}
+
+.about-container .about-image {
+    flex: 1; /* Memberikan ruang untuk gambar */
+    max-width: 400px; /* Batas lebar gambar */
+    margin-right: 20px; /* Jarak antara gambar dan teks */
+    text-align: center;
+}
+
+.about-container .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Membuat sudut gambar melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Memberikan efek bayangan */
+}
+
+.about-container .about-text {
+    flex: 2; /* Memberikan ruang lebih untuk teks */
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #000;
+}
+
+.about-container .about-text h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
